@@ -434,5 +434,4 @@ export function generateCookiePopupCode(
 })();
 `;
 }
-export { generateCookiePopupCode };
 

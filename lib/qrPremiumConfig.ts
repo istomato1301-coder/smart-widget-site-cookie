@@ -122,7 +122,6 @@ export const PRESET_CONFIGS: Record<QRPreset, QRPremiumConfig> = {
 export interface StylePreview {
   name: string;
   description: string;
-  preview: string; // CSS or description
 }
 
 export const STYLE_PREVIEWS: Record<QRStyle, StylePreview> = {

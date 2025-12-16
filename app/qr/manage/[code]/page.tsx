@@ -74,7 +74,7 @@ export default function QRManagePage() {
     if (format === "png") {
       const canvas = document.createElement("canvas");
       const ctx = canvas.getContext("2d");
-      if (!ctx) return;
+      if (!ctx || !qrCode.qrDataUrl) return;
 
       const exportSize = size || 2048;
       canvas.width = exportSize;
@@ -84,7 +84,7 @@ export default function QRManagePage() {
       await new Promise((resolve, reject) => {
         img.onload = resolve;
         img.onerror = reject;
-        img.src = qrCode.qrDataUrl;
+        img.src = qrCode.qrDataUrl!;
       });
 
       ctx.drawImage(img, 0, 0, exportSize, exportSize);

@@ -15,7 +15,6 @@ export async function generatePremiumQR(
   // Generate base QR code data
   const qrData = await QRCode.create(text, {
     errorCorrectionLevel: config.logo ? "H" : "M",
-    margin: 2,
   });
 
   // Create canvas
@@ -304,7 +303,6 @@ export async function generatePremiumQRSVG(
   // Full SVG implementation would be more complex
   const qrData = await QRCode.create(text, {
     errorCorrectionLevel: config.logo ? "H" : "M",
-    margin: 2,
   });
 
   const moduleCount = qrData.modules.size;

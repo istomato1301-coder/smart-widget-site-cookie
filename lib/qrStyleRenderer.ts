@@ -9,7 +9,6 @@ export async function generateStyledQR(
   // Generate QR code data
   const qrData = await QRCode.create(text, {
     errorCorrectionLevel: config.logo ? "H" : "M",
-    margin: 2,
   });
 
   // Create canvas
